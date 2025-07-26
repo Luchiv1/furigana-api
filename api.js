@@ -15,3 +15,4 @@ async function initHiraganaAPI() {
 }
 
 initHiraganaAPI();
+window.kuroshiro = kuroshiro;
