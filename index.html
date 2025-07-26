@@ -8,5 +8,17 @@
   <script src="libs/kuromoji.min.js"></script>
   <script src="libs/kuroshiro.min.js"></script>
   <script src="api.js"></script>
+  <textarea id="input" placeholder="日本語を入力してください" rows="4" cols="50"></textarea>
+  <br>
+  <button onclick="testConvert()">Convert to Hiragana</button>
+  <pre id="output"></pre>
+
+  <script>
+    async function testConvert() {
+      const input = document.getElementById('input').value;
+      const result = await window.kuroshiro.convert(input, { to: "hiragana" });
+      document.getElementById('output').innerText = result;
+    }
+  </script>
 </body>
 </html>
